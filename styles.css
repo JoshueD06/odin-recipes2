@@ -1,5 +1,4 @@
-/* 
-body {
+/* body {
     font: 400 1em/1.5 "Neuton", sans-serif;
     background: #090d00;
     color: rgba(255, 255, 255, 0.75);
@@ -15,7 +14,8 @@ body {
     display: flex;
     width: 100%;
     height: 100vh; /* Ocupa toda la altura de la ventana del navegador *
-    margin: 0; /* Elimina cualquier margen 
+    margin: 0; /* Elimina cualquier margen *
+    flex-direction: row; /* Asegura que los elementos estén en fila *
 }
 
 .left {
@@ -23,9 +23,9 @@ body {
     background: url('https://lirp.cdn-website.com/8af471c9/dms3rep/multi/opt/CHEF-1920w.jpeg') no-repeat center center;
     background-size: cover;
     border-top-right-radius: 50px; /* Bordes redondeados en las esquinas superior derecha *
-    border-bottom-right-radius: 50px; /* Bordes redondeados en las esquinas inferior derecha 
-    margin: 0; /* Asegura que la imagen esté pegada al borde 
-    padding: 0; /* Asegura que no haya relleno alrededor de la imagen 
+    border-bottom-right-radius: 50px; /* Bordes redondeados en las esquinas inferior derecha *
+    margin: 0; /* Asegura que la imagen esté pegada al borde *
+    padding: 0; /* Asegura que no haya relleno alrededor de la imagen *
 }
 
 .right {
@@ -36,7 +36,8 @@ body {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    overflow: auto; /* Permite desplazamiento si el contenido es demasiado grande /
+    overflow: auto; /* Permite desplazamiento si el contenido es demasiado grande *
+     Asegura que el contenido esté centrado verticalmente 
 }
 
 p {
@@ -51,7 +52,8 @@ p {
     position: relative;
     max-width: 90%;
     color: #fff;
-    margin-bottom: 30px; /* Ajusta el espacio abajo del título 
+    margin-bottom: 30px; /* Ajusta el espacio abajo del título *
+    margin-top: 100px; /* Ajusta el espacio arriba del título para bajarlo *
 }
 
 p span {
@@ -86,12 +88,12 @@ ul {
 ul li {
     background-color: rgba(255, 255, 255, 0.1);
     color: #fff;
-    padding: 20px; /*Aumenta el padding para más espacio interno *
+    padding: 20px; /* Aumenta el padding para más espacio interno *
     border-radius: 10px; /* Bordes redondeados para los elementos de la lista *
     margin: 15px 0; /* Aumenta el margen entre los elementos de la lista *
     font-size: 1.5em; /* Ajusta el tamaño de la fuente *
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    text-align: center; /* Centra el texto dentro del elemento de la lista *
+    text-align: center; /* Centra el texto dentro del elemento de la lista /
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -108,7 +110,50 @@ ul li a {
 
 ul li a:hover {
     color: #ff9800;
-} */
+}
+
+/* Media Queries para Responsividad *
+
+/* Para dispositivos móviles *
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas *
+    }
+
+    .left, .right {
+        height: auto; /* Permite que el alto se ajuste al contenido *
+    }
+
+    p {
+        font-size: 1.2em; /* Ajusta el tamaño de fuente en móviles 
+        margin-top: 50px; /* Ajusta el espacio arriba del título en móviles 
+    }
+
+    p span {
+        font-size: 2em; /* Ajusta el tamaño del texto principal en móviles 
+    }
+
+    ul li {
+        font-size: 1.2em; /* Ajusta el tamaño de fuente en móviles 
+    }
+}
+
+/* Para tablets y dispositivos de pantalla mediana 
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    p {
+        font-size: 1.5em; /* Ajusta el tamaño de fuente en tablets 
+        margin-top: 75px; /* Ajusta el espacio arriba del título en tablets 
+    }
+
+    p span {
+        font-size: 3em; /* Ajusta el tamaño del texto principal en tablets 
+    }
+
+    ul li {
+        font-size: 1.3em; /* Ajusta el tamaño de fuente en tablets 
+    }
+} 
+*/
 
 body {
     font: 400 1em/1.5 "Neuton", sans-serif;
@@ -125,19 +170,19 @@ body {
 .container {
     display: flex;
     width: 100%;
-    height: 100vh; /* Ocupa toda la altura de la ventana del navegador */
-    margin: 0; /* Elimina cualquier margen */
-    flex-direction: row; /* Asegura que los elementos estén en fila */
+    height: 100vh;
+    margin: 0;
+    flex-direction: row;
 }
 
 .left {
     flex: 1;
     background: url('https://lirp.cdn-website.com/8af471c9/dms3rep/multi/opt/CHEF-1920w.jpeg') no-repeat center center;
     background-size: cover;
-    border-top-right-radius: 50px; /* Bordes redondeados en las esquinas superior derecha */
-    border-bottom-right-radius: 50px; /* Bordes redondeados en las esquinas inferior derecha */
-    margin: 0; /* Asegura que la imagen esté pegada al borde */
-    padding: 0; /* Asegura que no haya relleno alrededor de la imagen */
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin: 0;
+    padding: 0;
 }
 
 .right {
@@ -148,8 +193,7 @@ body {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    overflow: auto; /* Permite desplazamiento si el contenido es demasiado grande */
-    /* Asegura que el contenido esté centrado verticalmente */
+    overflow: auto;
 }
 
 p {
@@ -164,8 +208,8 @@ p {
     position: relative;
     max-width: 90%;
     color: #fff;
-    margin-bottom: 30px; /* Ajusta el espacio abajo del título */
-    margin-top: 100px; /* Ajusta el espacio arriba del título para bajarlo */
+    margin-bottom: 30px;
+    margin-top: 50px;
 }
 
 p span {
@@ -193,19 +237,20 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    max-width: 500px; /* Aumenta el ancho máximo según sea necesario */
-    width: 100%; /* Asegura que la lista ocupe todo el ancho disponible */
+    max-width: 500px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 ul li {
     background-color: rgba(255, 255, 255, 0.1);
     color: #fff;
-    padding: 20px; /* Aumenta el padding para más espacio interno */
-    border-radius: 10px; /* Bordes redondeados para los elementos de la lista */
-    margin: 15px 0; /* Aumenta el margen entre los elementos de la lista */
-    font-size: 1.5em; /* Ajusta el tamaño de la fuente */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+    font-size: 1.5em;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    text-align: center; /* Centra el texto dentro del elemento de la lista */
+    text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -225,44 +270,42 @@ ul li a:hover {
 }
 
 /* Media Queries para Responsividad */
-
-/* Para dispositivos móviles */
 @media only screen and (max-width: 600px) {
     .container {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        flex-direction: column; /* Cambia la disposición a columna */
+        height: auto;
     }
 
-    .left, .right {
-        height: auto; /* Permite que el alto se ajuste al contenido */
+    .left {
+        order: 2; /* Coloca la imagen después del contenido textual */
+        height: 40vh; /* Ajusta la altura de la imagen */
+        border-radius: 0;
+    }
+
+    .right {
+        order: 1; /* Coloca el contenido textual antes de la imagen */
+        height: auto;
+        padding: 20px;
+        justify-content: flex-start;
     }
 
     p {
-        font-size: 1.2em; /* Ajusta el tamaño de fuente en móviles */
-        margin-top: 50px; /* Ajusta el espacio arriba del título en móviles */
+        font-size: 1.2em;
+        margin-top: 30px; /* Ajusta el margen superior */
+        margin-bottom: 20px; /* Ajusta el margen inferior */
     }
 
     p span {
-        font-size: 2em; /* Ajusta el tamaño del texto principal en móviles */
+        font-size: 2.5em;
+    }
+
+    ul {
+        margin-top: 10px;
     }
 
     ul li {
-        font-size: 1.2em; /* Ajusta el tamaño de fuente en móviles */
+        font-size: 1.2em;
     }
 }
 
-/* Para tablets y dispositivos de pantalla mediana */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    p {
-        font-size: 1.5em; /* Ajusta el tamaño de fuente en tablets */
-        margin-top: 75px; /* Ajusta el espacio arriba del título en tablets */
-    }
-
-    p span {
-        font-size: 3em; /* Ajusta el tamaño del texto principal en tablets */
-    }
-
-    ul li {
-        font-size: 1.3em; /* Ajusta el tamaño de fuente en tablets */
-    }
-}
 
