@@ -149,6 +149,7 @@ body {
     padding: 20px;
     box-sizing: border-box;
     overflow: auto; /* Permite desplazamiento si el contenido es demasiado grande */
+    /* Asegura que el contenido esté centrado verticalmente */
 }
 
 p {
@@ -164,6 +165,7 @@ p {
     max-width: 90%;
     color: #fff;
     margin-bottom: 30px; /* Ajusta el espacio abajo del título */
+    margin-top: 100px; /* Ajusta el espacio arriba del título para bajarlo */
 }
 
 p span {
@@ -236,6 +238,7 @@ ul li a:hover {
 
     p {
         font-size: 1.2em; /* Ajusta el tamaño de fuente en móviles */
+        margin-top: 50px; /* Ajusta el espacio arriba del título en móviles */
     }
 
     p span {
@@ -251,6 +254,7 @@ ul li a:hover {
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
     p {
         font-size: 1.5em; /* Ajusta el tamaño de fuente en tablets */
+        margin-top: 75px; /* Ajusta el espacio arriba del título en tablets */
     }
 
     p span {
@@ -261,3 +265,4 @@ ul li a:hover {
         font-size: 1.3em; /* Ajusta el tamaño de fuente en tablets */
     }
 }
+
