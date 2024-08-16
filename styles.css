@@ -1,90 +1,113 @@
 /* 
-body { 
-    font: 400 1em/1.5 "Neuton"; 
-    background: #090d00; 
-    color: rgba(255,255,255,.25); 
-    text-align: center; 
-    margin: 0
- }
+body {
+    font: 400 1em/1.5 "Neuton", sans-serif;
+    background: #090d00;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la ventana del navegador *
+    margin: 0; /* Elimina cualquier margen 
+}
+
+.left {
+    flex: 1;
+    background: url('https://lirp.cdn-website.com/8af471c9/dms3rep/multi/opt/CHEF-1920w.jpeg') no-repeat center center;
+    background-size: cover;
+    border-top-right-radius: 50px; /* Bordes redondeados en las esquinas superior derecha *
+    border-bottom-right-radius: 50px; /* Bordes redondeados en las esquinas inferior derecha 
+    margin: 0; /* Asegura que la imagen esté pegada al borde 
+    padding: 0; /* Asegura que no haya relleno alrededor de la imagen 
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto; /* Permite desplazamiento si el contenido es demasiado grande /
+}
 
 p {
-	text-transform: uppercase;
-	letter-spacing: .5em;
-	display: inline-block;
-	border: 4px double rgba(255,255,255,.25);
-	border-width: 4px 0;
-	padding: 1.5em 0em;
-	position: absolute;
-	top: 4%;
-	left: 50%;
-	width: 40em;
-	margin: 0 0 0 -20em;
-  
-  span {
-
-  	font: 700 4em/1 "Oswald", sans-serif;
-  	letter-spacing: 0;
-  	padding: .25em 0 .325em;
-	  display: block;
-	  margin: 0 auto;
-  	text-shadow: 0 0 80px rgba(255,255,255,.5);
-
-
-	  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
-	  -webkit-background-clip: text;
-	  background-clip: text;
-
-	  -webkit-text-fill-color: transparent;
-	  -webkit-animation: aitf 80s linear infinite;
-
-	  -webkit-transform: translate3d(0,0,0);
-	  -webkit-backface-visibility: hidden;
-
-  }
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    display: inline-block;
+    border: 4px double rgba(255, 255, 255, 0.25);
+    border-width: 4px 0;
+    padding: 1.5em 0;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    max-width: 90%;
+    color: #fff;
+    margin-bottom: 30px; /* Ajusta el espacio abajo del título 
 }
+
+p span {
+    font: 700 4em/1 "Oswald", sans-serif;
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+}
+
 @-webkit-keyframes aitf {
-	0% { background-position: 0% 50%; }
-	100% { background-position: 100% 50%; }
-}
-
-img{
-    height:450px;
-    width: fit-content;
-    margin-right: center;
-    margin-top: 270px;   
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
 
 ul {
-    list-style-type: none; 
+    list-style-type: none;
     padding: 0;
-    margin: 20px auto;
-    max-width: 600px;}
+    margin: 0;
+    max-width: 500px; /* Aumenta el ancho máximo según sea necesario *
+    width: 100%; /* Asegura que la lista ocupe todo el ancho disponible *
+}
 
 ul li {
     background-color: rgba(255, 255, 255, 0.1);
     color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    margin: 10px 0;
-    font-size: 1.2em;
+    padding: 20px; /*Aumenta el padding para más espacio interno *
+    border-radius: 10px; /* Bordes redondeados para los elementos de la lista *
+    margin: 15px 0; /* Aumenta el margen entre los elementos de la lista *
+    font-size: 1.5em; /* Ajusta el tamaño de la fuente *
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    text-align: center; /* Centra el texto dentro del elemento de la lista *
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 ul li:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
-    transform: scale(1.05); 
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
 }
 
 ul li a {
     text-decoration: none;
     color: #fff;
     transition: color 0.3s ease;
-} 
+}
 
-
- ul li a:hover {
-    color: #ff9800; 
+ul li a:hover {
+    color: #ff9800;
 } */
 
 body {
@@ -104,6 +127,7 @@ body {
     width: 100%;
     height: 100vh; /* Ocupa toda la altura de la ventana del navegador */
     margin: 0; /* Elimina cualquier margen */
+    flex-direction: row; /* Asegura que los elementos estén en fila */
 }
 
 .left {
@@ -198,5 +222,42 @@ ul li a:hover {
     color: #ff9800;
 }
 
+/* Media Queries para Responsividad */
 
+/* Para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
 
+    .left, .right {
+        height: auto; /* Permite que el alto se ajuste al contenido */
+    }
+
+    p {
+        font-size: 1.2em; /* Ajusta el tamaño de fuente en móviles */
+    }
+
+    p span {
+        font-size: 2em; /* Ajusta el tamaño del texto principal en móviles */
+    }
+
+    ul li {
+        font-size: 1.2em; /* Ajusta el tamaño de fuente en móviles */
+    }
+}
+
+/* Para tablets y dispositivos de pantalla mediana */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    p {
+        font-size: 1.5em; /* Ajusta el tamaño de fuente en tablets */
+    }
+
+    p span {
+        font-size: 3em; /* Ajusta el tamaño del texto principal en tablets */
+    }
+
+    ul li {
+        font-size: 1.3em; /* Ajusta el tamaño de fuente en tablets */
+    }
+}
